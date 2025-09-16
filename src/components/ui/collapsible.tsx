@@ -1,10 +1,9 @@
-import React from 'react';
+import * as CollapsiblePrimitive from '@radix-ui/react-collapsible';
 
-export default function Collapsible(){
-  return (
-    <div className='p-3 bg-gray-800 rounded'>
-      <strong>Collapsible</strong>
-      <div className='text-gray-400 text-sm'>Placeholder for collapsible</div>
-    </div>
-  )
-}
+const Collapsible = CollapsiblePrimitive.Root;
+
+const CollapsibleTrigger = CollapsiblePrimitive.CollapsibleTrigger;
+
+const CollapsibleContent = CollapsiblePrimitive.CollapsibleContent;
+
+export { Collapsible, CollapsibleTrigger, CollapsibleContent };
