@@ -1,10 +1,24 @@
-import React from 'react';
+import { useToast } from '@/hooks/use-toast';
+import { Toast, ToastClose, ToastDescription, ToastProvider, ToastTitle, ToastViewport } from '@/components/ui/toast';
 
-export default function Toaster(){
+export function Toaster() {
+  const { toasts } = useToast();
+
   return (
-    <div className='p-3 bg-gray-800 rounded'>
-      <strong>Toaster</strong>
-      <div className='text-gray-400 text-sm'>Placeholder for toaster</div>
-    </div>
-  )
+    <ToastProvider>
+      {toasts.map(function ({ id, title, description, action, ...props }) {
+        return (
+          <Toast key={id} {...props}>
+            <div className="grid gap-1">
+              {title && <ToastTitle>{title}</ToastTitle>}
+              {description && <ToastDescription>{description}</ToastDescription>}
+            </div>
+            {action}
+            <ToastClose />
+          </Toast>
+        );
+      })}
+      <ToastViewport />
+    </ToastProvider>
+  );
 }
