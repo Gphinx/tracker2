@@ -1,0 +1,1 @@
+import React from 'react'; export default function AuthForm(){ return <form className='p-6 bg-gray-800 rounded space-y-3'><input placeholder='Email' className='w-full p-2 bg-gray-900 rounded'/></form> }

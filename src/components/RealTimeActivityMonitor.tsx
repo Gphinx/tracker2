@@ -1,0 +1,1 @@
+import React from 'react'; export default function RealTimeActivityMonitor(){ return <div className='p-6 bg-gray-800 rounded'>Real Time Activity Monitor</div> }

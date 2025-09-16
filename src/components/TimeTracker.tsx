@@ -1,0 +1,1 @@
+import React from 'react'; export default function TimeTracker(){ return <div className='p-6 bg-gray-800 rounded'>Time Tracker</div> }

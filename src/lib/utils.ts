@@ -1,0 +1,1 @@
+export function formatTime(d:Date){return d.toLocaleTimeString()}
