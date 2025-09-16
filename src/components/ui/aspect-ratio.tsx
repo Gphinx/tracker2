@@ -1,10 +1,5 @@
-import React from 'react';
+import * as AspectRatioPrimitive from '@radix-ui/react-aspect-ratio';
 
-export default function AspectRatio(){
-  return (
-    <div className='p-3 bg-gray-800 rounded'>
-      <strong>AspectRatio</strong>
-      <div className='text-gray-400 text-sm'>Placeholder for aspect-ratio</div>
-    </div>
-  )
-}
+const AspectRatio = AspectRatioPrimitive.Root;
+
+export { AspectRatio };
